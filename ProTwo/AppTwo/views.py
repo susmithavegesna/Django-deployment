@@ -73,5 +73,3 @@ def registrationView(request):
                                                         "Profile_FormKey":Profile_Form}
 
 
-#def user_loginView(request):
-#    if request.methos == "POST":
