@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+{% extends 'Apptwo/base.html' %}
+{% load staticfiles %}
+{% block block_name %}
+      <div class="jumbotron">
+        {% if registeredKey %}
+          <h1>Thank you for registration</h1>
+        {% else %}
+        <form method="POST" enctype="multipart/form-data">
+          {{User_FormKey.as_p}}
+          {{Profile_FormKey.as_p}}
+          {% csrf_token %}
+          <input type="submit" name="" value="Submit">
+        </form>
+        {% endif %}
+      </div>
+{% endblock %}

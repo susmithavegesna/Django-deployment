@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>relative URLs</title>
+  </head>
+  <body>
+    <div class="container">
+      <h1>Your are in relative page</h1>
+      <a href="{% url 'AppTwo_myurlvar:helpinmyurl' %}"> Goes to help page</a>
+      <p></p>
+      <!-- {% url 'admin:index' %} here we are not using any variable because admin is already provided by django in INSTALLED_APPS(settings line34)
+        and the url name index is also associated with it
+      {% url 'index'  Django provides home view%} -->
+      <a href="{% url 'admin:index' %}">Goes to Admin</a>
+      <p></p>
+      <a href="{% url 'index' %}"> link to index</a>
+    </div>
+  </body>
+</html>

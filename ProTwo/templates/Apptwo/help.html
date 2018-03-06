@@ -1,0 +1,10 @@
+<!DOCTYPE html>
+{% extends "Apptwo/base.html"%}
+{% load my_extras %}
+
+{% block block_name %}
+    <h1>You are in help page now</h1>
+    {{help_insert}}<br>
+    <!-- here upper is the python fn that makes the text to uppercase -->
+    {{new_insert|cutkey:'hello'}}
+{% endblock %}

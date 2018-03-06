@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+{% load staticfiles %}
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>to prints user info </title>
+  </head>
+  <body>
+    <div class="usr">
+      {% if user_insert %}
+      <ol>
+
+          {% for i in user_insert %}
+          <li>User Info</li>
+          <ul>
+
+          <li>First Name: {{i.FirstName}}</li>
+          <li>Last Name: {{i.LastName}}</li>
+          <li>Email: {{i.Email}}</li>
+          </ul>
+          {% endfor %}
+      </ol>
+      {% endif %}
+    </div>
+  </body>
+</html>

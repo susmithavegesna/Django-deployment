@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+{% extends 'Apptwo/base.html' %}
+
+{% block block_name %}
+<div class="jumbotron">
+  <h1>please login</h1>
+  <form class="" action="{% url 'AppTwo:user_login'%}" method="post">
+    {% csrf_token %}
+    <label for="username">username</label>
+    <input type="text" name="username" placeholder="Enter user name">
+    <label for="password">password</label>
+    <input type="password" name="password" value="">
+    <input type="submit" name="" value="Submit">
+  </form>
+</div>
+{% endblock %}
